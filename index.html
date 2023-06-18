@@ -11,98 +11,100 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-    }
-    
-    header {
+      font-family: "Yu Gothic", "Trebuchet MS", Arial, sans-serif; /* Add the desired fonts here */
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
       background-color: #333;
       color: #fff;
       padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    
-    .logo-section {
-      flex-basis: 50%;
+
+    .logo {
       display: flex;
       align-items: center;
     }
-    
-    .logo-section img {
+
+    .logo img {
       height: 40px;
       margin-right: 10px;
     }
-    
+
     .company-name {
       font-size: 24px;
       text-transform: uppercase;
     }
-    
-    .options-section {
-      flex-basis: 50%;
+
+    .options {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
     }
-    
+
     .option {
       flex-basis: 33%;
       text-align: center;
-      padding: 10px;
+      padding: 10px 0;
     }
-    
+
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
-    
+
     .section {
-      margin-bottom: 40px;
-      padding: 20px;
-      border: 1px solid #ccc;
+      flex: 1;
+      padding: 40px;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
     }
-    
+
     .section h2 {
+      font-size: 28px;
       margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #333;
     }
-    
-    .product-gallery {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+
+    .section p {
+      margin: 10px 0;
+    }
+
+    .contact-info {
       margin-top: 20px;
     }
-    
+
     .product-gallery img {
       max-width: 100%;
       height: auto;
-      margin-bottom: 10px;
     }
 
     /* Responsive Styling */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
+      h1 {
+        font-size: 24px;
       }
-      
-      .logo-section, .options-section {
-        flex-basis: 100%;
-      }
-      
-      .options-section {
-        margin-top: 20px;
-      }
-      
-      .option {
-        flex-basis: 100%;
-      }
-      
-      .section {
+
+      .container {
         padding: 10px;
       }
-      
+
+      .section h2 {
+        font-size: 24px;
+      }
+
       .product-gallery img {
         width: 100%;
       }
@@ -111,23 +113,23 @@
 </head>
 <body>
   <header>
-    <div class="logo-section">
+    <div class="logo">
       <img src="logo.png" alt="Company Logo" />
       <h1 class="company-name">LED Light Catalog</h1>
     </div>
-    <div class="options-section">
+    <nav class="options">
       <a href="#about" class="option">About Us</a>
       <a href="#products" class="option">Our Products</a>
       <a href="#contact" class="option">Contact Us</a>
-    </div>
+    </nav>
   </header>
-  
+
   <div class="container">
     <section id="about" class="section">
       <h2>About Us</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mauris non mauris pretium dignissim.</p>
     </section>
-    
+
     <section id="products" class="section">
       <h2>Our Products</h2>
       <div class="product-gallery">
@@ -137,7 +139,7 @@
         <!-- Add more product images as needed -->
       </div>
     </section>
-    
+
     <section id="contact" class="section">
       <h2>Contact Us</h2>
       <p>Address: 123 ABC Street, City, Country</p>

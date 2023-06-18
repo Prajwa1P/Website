@@ -16,7 +16,6 @@
     
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       background-color: #333;
       color: #fff;
@@ -42,7 +41,8 @@
     .options-section {
       flex-basis: 50%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
     }
     
     .option {
@@ -83,16 +83,20 @@
 
     /* Responsive Styling */
     @media (max-width: 768px) {
-      .logo-section {
+      header {
+        flex-direction: column;
+      }
+      
+      .logo-section, .options-section {
         flex-basis: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
       }
       
       .options-section {
+        margin-top: 20px;
+      }
+      
+      .option {
         flex-basis: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
       }
       
       .section {

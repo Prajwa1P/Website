@@ -14,12 +14,16 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      justify-content: space-between;
     }
 
     header {
       background-color: #333;
       color: #fff;
       padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
@@ -40,12 +44,14 @@
     .options {
       display: flex;
       justify-content: space-between;
+      flex-grow: 1;
+      max-width: 600px;
     }
 
     .option {
+      flex-basis: 33%;
       text-align: center;
       padding: 10px 0;
-      flex: 1;
     }
 
     .container {
@@ -54,12 +60,16 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px;
     }
 
     .section {
       padding: 40px;
       background-color: #f5f5f5;
       width: 100%;
+      max-width: 900px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .section h2 {
@@ -116,12 +126,12 @@
   </header>
 
   <div class="container">
-    <div id="about" class="section">
+    <section id="about" class="section">
       <h2>About Us</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mauris non mauris pretium dignissim.</p>
-    </div>
+    </section>
 
-    <div id="products" class="section">
+    <section id="products" class="section">
       <h2>Our Products</h2>
       <div class="product-gallery">
         <img src="product1.jpg" alt="LED Light 1" />
@@ -129,14 +139,14 @@
         <img src="product3.jpg" alt="LED Light 3" />
         <!-- Add more product images as needed -->
       </div>
-    </div>
+    </section>
 
-    <div id="contact" class="section">
+    <section id="contact" class="section">
       <h2>Contact Us</h2>
       <p>Address: 123 ABC Street, City, Country</p>
       <p>Email: info@example.com</p>
       <p>Phone: +1 123-456-7890</p>
-    </div>
+    </section>
   </div>
 </body>
 </html>

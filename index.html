@@ -54,15 +54,33 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     
     .section {
+      width: 100%;
       margin-bottom: 40px;
       padding: 20px;
       border: 1px solid #ccc;
+      text-align: center;
     }
     
     .section h2 {
+      margin-bottom: 10px;
+    }
+    
+    .product-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .product-gallery img {
+      max-width: 100%;
+      height: auto;
       margin-bottom: 10px;
     }
   </style>

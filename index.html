@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 <head>
   <title>LED Light Catalog</title>
@@ -43,12 +43,12 @@
     .options {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      flex: 1; /* Added to make the options section expand to fill the remaining space */
       max-width: 600px;
     }
 
     .option {
-      flex-basis: 33%;
+      flex-grow: 1; /* Added to make each option equally sized */
       text-align: center;
       padding: 10px 0;
     }
@@ -57,16 +57,19 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center; /* Added to center the sections horizontally */
+      align-items: center;
+      justify-content: center; /* Added to center the sections vertically */
+      text-align: center; /* Added to center the section content horizontally */
     }
 
     .section {
       flex: 1;
       width: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Added to center the section content horizontally */
+      flex-direction: column;
+      justify-content: center; /* Added to center the section content vertically */
+      align-items: center; /* Added to center the section content horizontally */
+      background-color: #f5f5f5;
     }
 
     .section-content {

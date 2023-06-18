@@ -14,21 +14,39 @@
     }
     
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: #333;
       color: #fff;
       padding: 20px;
-      text-align: center;
     }
     
-    .options {
-      margin-top: 20px;
+    .logo-section {
+      flex-basis: 50%;
       display: flex;
-      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .logo-section img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .company-name {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    
+    .options-section {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: space-between;
     }
     
     .option {
-      color: #fff;
-      text-decoration: none;
+      flex-basis: 33%;
+      text-align: center;
       padding: 10px;
     }
     
@@ -51,12 +69,15 @@
 </head>
 <body>
   <header>
-    <h1>LED Light Catalog</h1>
-    <nav class="options">
+    <div class="logo-section">
+      <img src="logo.png" alt="Company Logo" />
+      <h1 class="company-name">LED Light Catalog</h1>
+    </div>
+    <div class="options-section">
       <a href="#about" class="option">About Us</a>
       <a href="#products" class="option">Our Products</a>
       <a href="#contact" class="option">Contact Us</a>
-    </nav>
+    </div>
   </header>
   
   <div class="container">
